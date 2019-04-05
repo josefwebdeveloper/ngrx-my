@@ -1,0 +1,21 @@
+<ul>
+  <li *ngFor="let item of posts$ | async">{{item.title}}</li>
+</ul>
+<ul>
+  <li *ngFor="let item of comments$ | async">{{item.body}}</li>
+</ul>
+<form [formGroup]="PostForm" (ngSubmit)="onSubmit()">
+  <label>
+    Post Id:
+    <input type="text" formControlName="id">
+  </label>
+  <label>
+    Post Title:
+    <input type="text" formControlName="title">
+  </label>
+
+
+    <button class="btn btn-primary">Register</button>
+
+</form>
+<button routerLink="/read" routerLinkActive="active">Read Component</button>

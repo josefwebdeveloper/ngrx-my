@@ -1,0 +1,10 @@
+<ul>
+  <li *ngFor="let item of (posts$ | async) ">{{item.id}}</li>
+
+</ul>
+<h5>{{(posts$ | async)|json}}  </h5>
+<h5>{{(comments$ | async)|json}}  </h5>
+<ul>
+  <li *ngFor="let item of comments$ | async ">{{item.body}}</li>
+
+</ul>
